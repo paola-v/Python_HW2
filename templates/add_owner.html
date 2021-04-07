@@ -1,0 +1,18 @@
+{%extends "base.html"%}
+{%block content%}
+
+<div class="jumbotron">
+    <h1>Add Owner:</h1>
+    <p>Please, add a new owner using the form below: </p>
+    <form method="POST">
+        {{form.hidden_tag()}}
+        {{form.name.label}}{{form.name()}}
+        {{form.dog_id.label}}{{form.dog_id()}}
+        {{form.submit()}}
+    </form>
+
+
+</div>
+
+
+{% endblock %}

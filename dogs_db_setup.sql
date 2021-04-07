@@ -1,0 +1,19 @@
+USE dogs_db;
+CREATE TABLE dogs(
+id INTEGER AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+breed VARCHAR(100),
+age INT,
+sex ENUM('girl','boy')
+);
+
+CREATE TABLE owners(
+id INTEGER PRIMARY KEY AUTO_INCREMENT PRIMARY KEY,
+name VARCHAR(100),
+dog_id INT
+);
+
+SELECT * FROM dogs;
+SELECT * FROM owners;
+
+ALTER TABLE dogs

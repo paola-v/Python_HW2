@@ -1,11 +1,11 @@
 import os
-from flask import Flask, render_template, request, redirect, url_for, session
+from flask import Flask, render_template, redirect, url_for
 from flask_sqlalchemy import SQLAlchemy 
 from flask_migrate import Migrate
 from forms import AddForm, DelForm, AddOwnerForm
-from config import username, password
+from config import username, password, key
 app = Flask(__name__)
-app.config['SECRET_KEY'] = 'mykey'
+app.config['SECRET_KEY'] = key
 
 ############################
 ####    SQL DATABASE    ####
@@ -30,8 +30,10 @@ class Dog(db.Model):
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.Text)
     breed = db.Column(db.Text)
+    color = db.Column(db.Text)
     age = db.Column(db.Integer)
-    sex = db.Column(db.Text)     #See how to make this accept only two values : boy or girl
+    mood = db.Column(db.Text)
+    sex = db.Column(db.Text)     
 
     # ONE DOG TO ONE OWNER
     owner = db.relationship('Owner',backref='dog',uselist=False)
@@ -39,10 +41,12 @@ class Dog(db.Model):
 
 # Define init and repr method for the class
 
-    def __init__(self,name,breed,age,sex):
+    def __init__(self,name,breed,color,age,mood,sex):
         self.name = name
         self.breed = breed
+        self.color = color
         self.age = age
+        self.mood = mood
         self.sex = sex
         
 
@@ -62,10 +66,14 @@ class Owner(db.Model):
 # Table Column Names
     id = db.Column(db.Integer,primary_key=True)
     name = db.Column(db.Text)
+    phone = db.Column(db.Text)
+    email = db.Column(db.Text)
     dog_id = db.Column(db.Integer,db.ForeignKey('dogs.id'))
 
-    def __init__ (self,name,dog_id):
+    def __init__ (self,name,phone, email, dog_id):
         self.name = name
+        self.phone = phone
+        self.email = email
         self.dog_id = dog_id
 
     def __repr__(self):
@@ -104,7 +112,9 @@ def add_dog():
     if form.validate_on_submit():
         name=form.name.data
         breed=form.breed.data
+        color=form.color.data
         age=form.age.data
+        mood=form.mood.data
         sex=form.sex.data
         new_dog=Dog(name,breed,age,sex)
         db.session.add(new_dog)

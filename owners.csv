@@ -1,11 +1,11 @@
-name,dog_id
-Adam Baker,2
-Donna Brown,3
-Anthony Campbell,5
-Emma Bond,14
-Dorothy Lee,11
-Maria Walker,8
-Jake Wilson,6
-Jason Powell,1
-Kate Russel,19
-Stephen Wallace,12
+name,phone,email,dog_id
+Adam Baker,773-455-1233,adamb@yahoo.com,2
+Donna Brown,312-010-4568,donnab@gmail.com,3
+Anthony Campbell,312-662-9961,anthony_c81@hotmail.com,5
+Emma Bond,773-474-8935,emma.bond@gmail.com,14
+Dorothy Lee,773-936-5620,lee_dorothy@gmail.com,11
+Maria Walker,773-909-8072,maria_w@yahoo.com,8
+Jake Wilson,312-671-0129,jake.wilson@gmail.com,6
+Jason Powell,773-509-4821,jason.p90@hotmail.com,1
+Kate Russel,312-123-9052,kate.russel@gmail.com,19
+Stephen Wallace,773-718-0712,stephen.wallace@yahoo.com,12

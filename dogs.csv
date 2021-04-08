@@ -1,20 +1,20 @@
-name,breed,age,sex
-Bella,Chihuahua,2,girl
-Autumn,Boston Terrier,4,girl
-Bailey,Chow Chow,1,boy
-Summer,Golden Retriever,3,girl
-Benji,Lab,4,boy
-Spike,Shih Tzu,5,boy
-Zoe,Collie,1,girl
-Oscar,Dachshund,2,boy
-Violet,French Bulldog,3,girl
-Chester,German Shepherd,4,boy
-Scooter,Rottweiler,1,boy
-Sugar,Corgi,2,girl
-Boomer,Rottweiler,2,boy
-Joey,Bulldog,3,boy
-Charlie,French Bulldog,4,boy
-Tasha,Golden Retriever,1,girl
-Shadow,Doberman,4,boy
-Toby,Poodle,5,boy
-Roxie,Collie,3,girl
+name,breed,color,age,mood,sex
+Bella,Chihuahua,white,2,excited,girl
+Autumn,Boston Terrier,brown,4,playful,girl
+Bailey,Chow Chow,brown,1,relaxed,boy
+Summer,Golden Retriever,brown,3,fearful,girl
+Benji,Lab,black,4,excited,boy
+Spike,Shih Tzu,grey,5,excited,boy
+Zoe,Collie,brown,1,playful,girl
+Oscar,Dachshund,brown,2,relaxed,boy
+Violet,French Bulldog,white,3,relaxed,girl
+Chester,German Shepherd,brown,4,excited,boy
+Scooter,Rottweiler,black,1,fearful,boy
+Sugar,Corgi,brown,2,relaxed,girl
+Boomer,Rottweiler,black,2,excited,boy
+Joey,Bulldog,black,3,playful,boy
+Charlie,French Bulldog,black,4,relaxed,boy
+Tasha,Golden Retriever,brown,1,relaxed,girl
+Shadow,Doberman,black,4,fearful,boy
+Toby,Poodle,white,5,excited,boy
+Roxie,Collie,white,3,excited,girl

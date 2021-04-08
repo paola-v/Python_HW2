@@ -3,6 +3,9 @@
 
 <div class="jumbotron">
     <h1>Have a dog that needs to be adopted ? </h1>
+    <img src='..\static\add_dog.jpg' alt="Adopt a Dog today">
+    <br>
+    <br>
     <p>Add it to our database!</p>
     <form method="POST">
         {{form.hidden_tag()}}
@@ -10,7 +13,11 @@
         <br>
         {{form.breed.label}} {{form.breed()}}
         <br>
+        {{form.color.label}} {{form.color()}}
+        <br>
         {{form.age.label}} {{form.age()}}
+        <br>
+        {{form.mood.label}} {{form.mood()}}
         <br>
         {{form.sex.label}} {{form.sex()}}
         <br>

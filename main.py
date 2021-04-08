@@ -11,7 +11,7 @@ app.config['SECRET_KEY'] = 'mykey'
 ####    SQL DATABASE    ####
 
 basedir = os.path.abspath(os.path.dirname(__file__))
-app.config['SQLALCHEMY_DATABASE_URI']=f'mysql+pymysql://{username}:{password}@localhost/dogs_db' #sqlite:///'+os.path.join(basedir,'data.sqlite') #
+app.config['SQLALCHEMY_DATABASE_URI']=f'mysql+pymysql://{username}:{password}@localhost/dogs_db' 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS']=False
 db = SQLAlchemy(app)
 Migrate(app,db)

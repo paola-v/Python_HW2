@@ -95,9 +95,10 @@ def add_owner():
     
     if form.validate_on_submit():
         name = form.name.data
+        phone = form.phone.data
+        email = form.email.data
         dog_id = form.dog_id.data
-
-        new_owner = Owner(name, dog_id)
+        new_owner = Owner(name,phone,email,dog_id)
         db.session.add(new_owner)
         db.session.commit() 
 
@@ -116,7 +117,7 @@ def add_dog():
         age=form.age.data
         mood=form.mood.data
         sex=form.sex.data
-        new_dog=Dog(name,breed,age,sex)
+        new_dog=Dog(name,breed,color,age,mood,sex)
         db.session.add(new_dog)
         db.session.commit()
 
